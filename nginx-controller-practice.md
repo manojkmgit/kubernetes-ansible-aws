@@ -54,7 +54,7 @@ It should open the sample app running inside the Kubernetes cluster.
 It shows multiple path ingress - one url serving mutiple paths which are serving different services or apps.
 
 We will start another deployment with version 2 of the app and one more service to serve the version 2 of the apps.
-```console`
+```console
 kubectl apply -f flask-app-v2.yml
 kubectl apply -f flask-svc-ingress-v2.yml
 kubectl get deploy
@@ -105,9 +105,9 @@ flask-ingress-virtual-host   nginx   v1.flask.app.com,v2.flask.app.com   172.31.
 
 Add entries for 2 hostnames into hosts file on the external machine.
 Entries will be like this:
-
+```
 13.233.138.225 v1.flask.app.com
 13.127.76.200 v2.flask.app.com
-
+```
 Open the brower on external machine and enter the url - v1.flask.app.com or v2.flask.app.com \
 It should open the respective version of the app running inside the Kubernetes cluster.
